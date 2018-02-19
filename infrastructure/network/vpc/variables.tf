@@ -20,17 +20,6 @@ EOF
 
 variable "cidr_block" {
   type        = "string"
-  description = "The cidr block that we have reserved for AWS environments.
+  description = "The cidr block that we have reserved for AWS environments."
 }
 
-variable "domain" {
-  type = "string"
-}
-
-variable "internal_domain" {
-  type = "string"
-}
-
-variable "name_servers" {
-  type = "list"
-}

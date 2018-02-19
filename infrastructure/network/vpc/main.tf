@@ -31,24 +31,6 @@ resource "aws_vpc" "vpc" {
   }
 }
 
-// Create a dhcp options set for the vpc that uses custom nameservers and domain name
-resource "aws_vpc_dhcp_options" "options" {
-  domain_name         = "${var.name}.${var.internal_domain}"
-  domain_name_servers = ["${var.name_servers}"]
-
-  tags {
-    Name  = "${var.name}"
-    fleet = "${var.name}"
-
-    terrafrom = true
-  }
-}
-
-resource "aws_vpc_dhcp_options_association" "association" {
-  vpc_id          = "${aws_vpc.vpc.id}"
-  dhcp_options_id = "${aws_vpc_dhcp_options.options.id}"
-}
-
 resource "aws_internet_gateway" "default" {
   vpc_id = "${aws_vpc.vpc.id}"
 
