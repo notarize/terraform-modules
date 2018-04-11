@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "project_bucket" {
             ],
             "Effect": "Allow",
             "Principal": "*",
-            "Resource": "arn:aws:s3:::notarize-${var.bucket}/*",
+            "Resource": "arn:aws:s3:::notarize-${var.project}/*",
             "Sid": "PublicReadAccess"
         }
     ],
