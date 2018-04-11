@@ -28,5 +28,6 @@ POLICY
     gitrepo = "${var.gitrepo}"
 
     terrafrom = true
+  }
 }
 
