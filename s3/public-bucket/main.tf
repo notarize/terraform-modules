@@ -5,6 +5,11 @@ resource "aws_s3_bucket" "project_bucket" {
 
   bucket = "notarize-${var.project}"
 
+  website {
+    index_document = "index.html"
+    error_document = "error.html"
+  }
+
   acl = "public-read"
   policy = <<POLICY
 {
