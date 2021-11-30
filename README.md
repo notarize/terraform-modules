@@ -1,3 +1,12 @@
+# OBSOLETE
+
+This repo is obsolete.
+
+See this page for details on our current terraform infrastructure:
+https://notarize.atlassian.net/wiki/spaces/DEVOPS/pages/407863698/Managing+AWS+infrastructure+via+Terraform
+
+The original README contents follow.
+
 # terraform-modules
 
 Reusable terraform modules that manage our infrastructure
